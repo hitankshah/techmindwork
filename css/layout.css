@@ -28,17 +28,20 @@
 
 #menu-wrap{
 	position: fixed;
-	padding-bottom:10px;
+	padding-bottom:0px;
 	width:100%;
 	z-index:500;
 	top:0;
 	left:0;
+
 }
 #menu-wrap .container .columns  {
 	margin-bottom: 0 !important;
 }
 .menu-back{
 	background: rgba(247,247,247,.8);
+	margin-bottom: 0% !important;
+	padding-bottom: 0% !important;
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
@@ -60,17 +63,17 @@
 	-o-transition :all 0.3s ease-out;
 	transition : all 0.3s ease-out;
 }
-.cbp-af-header.cbp-af-header-shrink .logo{
-	width:115px;
-	height:46px;
-	top:15px;
-	background:url('../images/logo.png') no-repeat center center;
-	background-size:115px 46px;
+/* .cbp-af-header.cbp-af-header-shrink .logo{
+width:115px;
+height:32px;
+top:15px;
+background:url('../images/logo.png') no-repeat center center;
+background-size:115px 32px;
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
 	transition : all 0.3s ease-out;
-}
+} */
 
 .cbp-af-header.cbp-af-header-shrink ul.slimmenu {
 	margin-top:1px;
@@ -108,12 +111,12 @@ ul.slimmenu li ul {
 .logo{
 	position:absolute;
 	width:200px;
-	height:70px;
+	height:65px;
 	z-index:10000;
 	left:40px;
-	top:30px;
+	top:15px;
 	background:url('../images/logo.png') no-repeat center center;
-	background-size:200px 70px;
+	background-size:200px 65px;
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
@@ -131,11 +134,11 @@ ul.slimmenu li ul {
 	padding: 0 8px;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box
-	-webkit-transition : all 0.3s ease-out;
-	-moz-transition : all 0.3s ease-out;
-	-o-transition :all 0.3s ease-out;
-	transition : all 0.3s ease-out;
+	-webkit-box-sizing: border-box;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 .collapse-button {
 	position: absolute;
@@ -184,7 +187,7 @@ ul.slimmenu {
 	padding-right:10px;
 	text-align:right;
 	margin-top:23px;
-	margin-bottom:20px;
+	margin-bottom:0px;
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
@@ -472,15 +475,24 @@ ul.slimmenu.collapsed li > ul {
 #slider-wrap .bg,
 #slider-wrap div[style*="background-image"] {
 	position: absolute !important;
-	width: 100% !important;
-	height: 100% !important;
-	top: 0 !important;
-	left: 0 !important;
+	width: 100% !important;  /* reduced from 100% to contain the width */
+	height: 96% !important; /* reduced height for better fit */
+	top: 1% !important;   /* adjusted top to center vertically */
+	left: 0 !important;  /* adjusted left to center horizontally */
+}
+
+/* Adjust specific images in slider */
+#slider-wrap img {
+	max-width: 8213px !important;  /* set maximum width for the images */
+	max-height:  4615px !important; /* set maximum height for the images */
+	object-fit: contain !important;
+	margin: auto !important;
+	display: block !important;
 }
 
 #slider-wrap div[style*="background-image"],
 #slider-wrap .bg {
-	background-size: cover !important;
+	background-size: contain !important; /* changed from cover to contain to ensure full image is visible */
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
 	background-attachment: scroll !important;
@@ -489,7 +501,7 @@ ul.slimmenu.collapsed li > ul {
 /* Force container to fill viewport properly */
 .home-top-slider #slider-wrap {
 	width: 100% !important;
-	height: 100% !important;
+	height: 50% !important;
 	position: relative !important;
 	overflow: hidden !important;
 }

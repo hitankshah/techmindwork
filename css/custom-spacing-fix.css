@@ -1,0 +1,41 @@
+/* Custom spacing fix for header and navigation */
+
+/* Fix for menu bottom margin */
+.menu-back {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Fix for slimmenu bottom margin */
+ul.slimmenu {
+    margin-bottom: 0 !important;
+}
+
+/* Ensure no spacing between menu and first section */
+#menu-wrap + section.cd-section,
+.cbp-af-header + section.cd-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove bottom spacing from menu-wrap */
+#menu-wrap {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Ensure columns in menu have no bottom margin */
+#menu-wrap .container .columns {
+    margin-bottom: 0 !important;
+}
+
+/* Remove top margin from first section after header */
+section.cd-section:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove bottom margin from header elements */
+.cd-block {
+    margin-top: 0 !important;
+}

@@ -28,6 +28,11 @@
 		.container .columns                         { float: left; display: inline; margin-left: 25px; margin-right: 25px; margin-top: 25px; margin-bottom: 25px;}
 		.row                                        { margin-bottom: 50px; }
 
+       #menu-wrap + .container .row,
+        .cbp-af-header + .container .row {
+            margin-top: 0 !important;
+        }
+        
 		/* Nested Column Classes */
 		.column.alpha, .columns.alpha               { margin-left: 0; }
 		.column.omega, .columns.omega               { margin-right: 0; }
