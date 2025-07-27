@@ -4,9 +4,22 @@
 	//Home Sections fit screen	
 				
 	$(function(){"use strict";
-		$('.home-top-slider').css({'height':($(window).height())+'px'});
+		function setSliderHeight() {
+			var headerHeight = 120; // Default header height
+			
+			// Adjust header height for responsive breakpoints
+			if ($(window).width() <= 480) {
+				headerHeight = 80;
+			} else if ($(window).width() <= 768) {
+				headerHeight = 100;
+			}
+			
+			$('.home-top-slider').css({'height':($(window).height() - headerHeight)+'px'});
+		}
+		
+		setSliderHeight();
 		$(window).resize(function(){
-		$('.home-top-slider').css({'height':($(window).height())+'px'});
+			setSliderHeight();
 		});
 	});
 	
@@ -22,6 +35,21 @@
                 shuffle:true,
                 preserveWidth:false,
                 effect:"zoom",
+                autoStart:true,
+                onStart:function(){
+                    // Force proper sizing after gallery starts
+                    setTimeout(function(){
+                        $('#slider-wrap div[style*="background-image"]').css({
+                            'background-size': 'cover !important',
+                            'background-position': 'center center !important',
+                            'width': '100%',
+                            'height': '100%',
+                            'position': 'absolute',
+                            'top': '0',
+                            'left': '0'
+                        });
+                    }, 100);
+                },
 //				effect:{enter:{transform:"scale("+(1+ Math.random()*2)+")",opacity:0},exit:{transform:"scale("+(Math.random()*2)+")",opacity:0}},
 
                 // If your server allow directory listing you can use:
@@ -37,10 +65,25 @@
                  "images/3.jpg"
                  ],
 
-                onStart:function(){},
                 onPause:function(){},
-                onPlay:function(opt){},
-                onChange:function(opt,idx){},
+                onPlay:function(opt){
+                    // Force proper sizing when playing
+                    $('#slider-wrap div[style*="background-image"]').css({
+                        'background-size': 'cover !important',
+                        'background-position': 'center center !important'
+                    });
+                },
+                onChange:function(opt,idx){
+                    // Force proper sizing on image change
+                    setTimeout(function(){
+                        $('#slider-wrap div[style*="background-image"]').css({
+                            'background-size': 'cover !important',
+                            'background-position': 'center center !important',
+                            'width': '100%',
+                            'height': '100%'
+                        });
+                    }, 50);
+                },
                 onNext:function(opt){},
                 onPrev:function(opt){}
             });

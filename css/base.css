@@ -52,15 +52,15 @@
 body {
 	background: #f2f2f2;
 	font-family: 'Open Sans', sans-serif;
-	font-weight:400;
-	font-size: 13px;
-	line-height:26px;
-	color:#999999;
-	overflow-x:hidden;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	color: #666;
+	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	-webkit-text-size-adjust: 100%;
- }
+}
  html {
 		overflow-x:hidden; 
 	height:100%;
@@ -69,25 +69,48 @@ body {
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #414141;
-		font-family: 'Galano-Bold';
-		text-align:center;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		margin-bottom: 16px;
 	}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-	h1 { font-size: 40px; line-height:46px; }
-	h2 { font-size: 34px; line-height:40px;}
-	h3 { font-size: 30px; line-height: 36px;}
-	h4 { font-size: 26px; line-height: 32px;}
-	h5 { font-size: 22px; line-height: 28px;}
-	h6 { font-size: 18px; line-height: 24px;}
+	h1 { font-size: 40px; line-height: 46px; font-weight: 700; }
+	h2 { font-size: 34px; line-height: 40px; font-weight: 600; }
+	h3 { font-size: 30px; line-height: 36px; font-weight: 600; }
+	h4 { font-size: 26px; line-height: 32px; font-weight: 600; }
+	h5 { font-size: 22px; line-height: 28px; font-weight: 500; }
+	h6 { font-size: 18px; line-height: 24px; font-weight: 500; }
 
-
-	p {  }
+	p { 
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		line-height: 26px;
+		color: #666;
+		margin-bottom: 16px;
+		font-weight: 400;
+		letter-spacing: 0.5px;
+	}
 	p img { margin: 0; }
-	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	p.lead { 
+		font-size: 21px; 
+		line-height: 27px; 
+		color: #555; 
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+	}
 
 	em { font-style: italic; }
-	strong { font-weight: 600;}
-	small { font-size: 80%; }
+	strong { font-weight: 600; color: #414141; }
+	small { font-size: 14px; line-height: 20px; }
+	
+	/* Global body text settings */
+	body {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		line-height: 26px;
+		color: #666;
+		font-weight: 400;
+	}
 	
 
 

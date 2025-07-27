@@ -4,9 +4,22 @@
 	//Home Sections fit screen	
 				
 	$(function(){"use strict";
-		$('.about-top').css({'height':($(window).height())+'px'});
+		function setPageHeight() {
+			var headerHeight = 120; // Default header height
+			
+			// Adjust header height for responsive breakpoints
+			if ($(window).width() <= 480) {
+				headerHeight = 80;
+			} else if ($(window).width() <= 768) {
+				headerHeight = 100;
+			}
+			
+			$('.about-top').css({'height':($(window).height() - headerHeight)+'px'});
+		}
+		
+		setPageHeight();
 		$(window).resize(function(){
-		$('.about-top').css({'height':($(window).height())+'px'});
+			setPageHeight();
 		});
 	});
 

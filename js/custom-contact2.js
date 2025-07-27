@@ -4,9 +4,22 @@
 	//Home Sections fit screen	
 				
 	$(function(){"use strict";
-		$('.contact-top, #cd-google-map').css({'height':($(window).height())+'px'});
+		function setPageHeight() {
+			var headerHeight = 120; // Default header height
+			
+			// Adjust header height for responsive breakpoints
+			if ($(window).width() <= 480) {
+				headerHeight = 80;
+			} else if ($(window).width() <= 768) {
+				headerHeight = 100;
+			}
+			
+			$('.contact-top, #cd-google-map').css({'height':($(window).height() - headerHeight)+'px'});
+		}
+		
+		setPageHeight();
 		$(window).resize(function(){
-		$('.contact-top, #cd-google-map').css({'height':($(window).height())+'px'});
+			setPageHeight();
 		});
 	});
 
