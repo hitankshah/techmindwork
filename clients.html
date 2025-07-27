@@ -1,154 +1,397 @@
 ﻿<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]>
-<!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
 
-	<!-- Basic Page Needs
-  ================================================== -->
 	<meta charset="utf-8">
 	<title>Tech Mind Works | Portfolio</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	
-	
-	<!-- CSS
-  ================================================== -->
+
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/base.css"/>
 	<link rel="stylesheet" href="css/skeleton.css"/>
 	<link rel="stylesheet" href="css/layout.css"/>
 	<link rel="stylesheet" href="css/font-awesome.css" />
 	<link rel="stylesheet" href="css/retina.css"/>
 	<link rel="stylesheet" href="css/animsition.min.css"/>
-	
+	<link rel="stylesheet" href="css/clients.css"/>
 
-		
-	<!-- Favicons
-	================================================== -->
 	<link rel="shortcut icon" href="favicon.png">
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-	
-	
-	
+
+	<!-- Enhanced Logo Grid CSS -->
+	<style>
+		.clients-section {
+			padding: 60px 20px;
+			text-align: center;
+			background: #f8f9fa;
+		}
+		.clients-section h2 {
+			font-size: 2.5em;
+			margin-bottom: 15px;
+			color: #333;
+			font-weight: 300;
+		}
+		.clients-section p {
+			color: #666;
+			margin-bottom: 50px;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 1.1em;
+			line-height: 1.6;
+		}
+		.logo-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+			gap: 40px;
+			align-items: center;
+			justify-items: center;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.logo-grid a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			background: white;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+			min-height: 80px;
+			width: 100%;
+			text-decoration: none;
+		}
+		.logo-grid a:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+		}
+		.logo-grid img {
+			max-width: 120px;
+			max-height: 60px;
+			object-fit: contain;
+			filter: grayscale(100%);
+			transition: filter 0.3s ease;
+		}
+		.logo-grid a:hover img {
+			filter: grayscale(0%);
+		}
+		
+		/* Fallback for missing images */
+		.logo-grid a::after {
+			content: attr(title);
+			position: absolute;
+			opacity: 0;
+			font-size: 12px;
+			color: #999;
+			transition: opacity 0.3s ease;
+		}
+		.logo-grid img[src=""], 
+		.logo-grid img:not([src]) {
+			display: none;
+		}
+		.logo-grid a:has(img[src=""]) .fallback-text,
+		.logo-grid a:has(img:not([src])) .fallback-text {
+			display: block;
+		}
+		.fallback-text {
+			display: none;
+			font-weight: 500;
+			color: #666;
+			font-size: 14px;
+		}
+		
+		/* Responsive design */
+		@media (max-width: 768px) {
+			.logo-grid {
+				grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+				gap: 20px;
+			}
+			.clients-section {
+				padding: 40px 15px;
+			}
+			.clients-section h2 {
+				font-size: 2em;
+			}
+		}
+	</style>
+
 </head>
-<body>	
+<body>
 
 	<div class="animsition">
-	
-	<!-- MENU
-    ================================================== -->	
 
+		<!-- MENU -->
 		<div id="menu-wrap" class="menu-back cbp-af-header">
 			<div class="container">
 				<div class="sixteen columns">
 					<div class="logo"></div>
 					<ul class="slimmenu">
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="about.html" class="animsition-link">about</a>
-						</li>
-						<li>
-							<a class="active-menu animsition-link" href="clients.html">Clients</a>
-						</li>
-						
-						<li>
-							<a href="contact.html">hello</a>
-						</li>
-						
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html" class="animsition-link">about</a></li>
+						<li><a class="active-menu animsition-link" href="clients.html">Clients</a></li>
+						<li><a href="contact.html">hello</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
-	<!-- Primary Page Layout
-	================================================== -->
 
-	<section class="cd-section">
-		<div class="cd-block">
-			<div class="work-top">
+		<!-- SECTION START -->
+
+				<!-- CLIENT HEADER SECTION -->
+				<div class="section-hero">
+    <div class="container">
+        <div class="sixteen columns">
+            <h1 class="hero-title">Our Clients</h1>
+            <div class="sep-line"></div>
+            <p class="hero-subtitle">Every client brings new inspiration. We have been fortunate to work with many of them.</p>
+        </div>
+    </div>
+</div>
+
+<!-- LOGO GRID SECTION -->
+<section class="clients-section">
+    <div class="container">
+        <div class="sixteen columns">
+            <div class="logo-grid">
+                <!-- Your existing logo grid items remain the same -->
+						<a href="#" title="Herbalife"><img src="logos/herbalife.svg" alt="Herbalife"></a>
+						<a href="#" title="Metro">
+							<img src="logos/metro.svg" alt="Metro logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Metro</span>
+						</a>
+						<a href="#" title="EMAG">
+							<img src="logos/emag.svg" alt="EMAG logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">EMAG</span>
+						</a>
+						<a href="#" title="Jack & Jones">
+							<img src="logos/jackjones.svg" alt="Jack & Jones logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Jack & Jones</span>
+						</a>
+						<a href="#" title="Misbu">
+							<img src="logos/misbu.svg" alt="Misbu logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Misbu</span>
+						</a>
+						<a href="#" title="Zara">
+							<img src="logos/zara.svg" alt="Zara logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Zara</span>
+						</a>
+						<a href="#" title="PepsiCo">
+							<img src="logos/pepsico.svg" alt="PepsiCo logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">PepsiCo</span>
+						</a>
+						<a href="#" title="Decathlon">
+							<img src="logos/decathlon.svg" alt="Decathlon logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Decathlon</span>
+						</a>
+						<a href="#" title="Larsen & Toubro">
+							<img src="logos/larsentoubro.svg" alt="Larsen & Toubro logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Larsen & Toubro</span>
+						</a>
+						<a href="#" title="Forever 21">
+							<img src="logos/forever21.svg" alt="Forever 21 logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Forever 21</span>
+						</a>
+						<a href="#" title="Sabyasachi">
+							<img src="logos/sabyasachi.svg" alt="Sabyasachi logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Sabyasachi</span>
+						</a>
+						<a href="#" title="Charlotte's Web">
+							<img src="logos/charlottesweb.svg" alt="Charlotte's Web logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Charlotte's Web</span>
+						</a>
+						<a href="#" title="Bacardi">
+							<img src="logos/bacardi.svg" alt="Bacardi logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Bacardi</span>
+						</a>
+						<a href="#" title="Carrefour">
+							<img src="logos/carrefour.svg" alt="Carrefour logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Carrefour</span>
+						</a>
+						<a href="#" title="Bosch">
+							<img src="logos/bosch.svg" alt="Bosch logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Bosch</span>
+						</a>
+						<a href="#" title="Budweiser">
+							<img src="logos/budweiser.svg" alt="Budweiser logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Budweiser</span>
+						</a>
+						<a href="#" title="Infosys">
+							<img src="logos/infosys.svg" alt="Infosys logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Infosys</span>
+						</a>
+						<a href="#" title="HSBC">
+							<img src="logos/hsbc.svg" alt="HSBC logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">HSBC</span>
+						</a>
+						<a href="#" title="Nescafé">
+							<img src="logos/nescafe.svg" alt="Nescafé logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Nescafé</span>
+						</a>
+						<a href="#" title="Gillette">
+							<img src="logos/gillette.svg" alt="Gillette logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Gillette</span>
+						</a>
+						<a href="#" title="Indian Premier League">
+							<img src="logos/ipl.svg" alt="Indian Premier League logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">IPL</span>
+						</a>
+						<a href="#" title="NBA">
+							<img src="logos/nba.svg" alt="NBA logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">NBA</span>
+						</a>
+						<a href="#" title="Mindtree">
+							<img src="logos/mindtree.svg" alt="Mindtree logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Mindtree</span>
+						</a>
+						<a href="#" title="3M">
+							<img src="logos/3m.svg" alt="3M logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">3M</span>
+						</a>
+						<a href="#" title="Grey Goose">
+							<img src="logos/greygoose.png" alt="Grey Goose logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Grey Goose</span>
+						</a>
+						<a href="#" title="Hindustan Unilever">
+							<img src="logos/hul.svg" alt="Hindustan Unilever logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">HUL</span>
+						</a>
+						<a href="#" title="Nicetec">
+							<img src="logos/nicetec.svg" alt="Nicetec logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Nicetec</span>
+						</a>
+						<a href="#" title="JW Marriott">
+							<img src="logos/jwmarriott.svg" alt="JW Marriott logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">JW Marriott</span>
+						</a>
+						<a href="#" title="SAP">
+							<img src="logos/sap.svg" alt="SAP logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">SAP</span>
+						</a>
+						<a href="#" title="Kotak Life Insurance">
+							<img src="logos/kotak.svg" alt="Kotak Life Insurance logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Kotak</span>
+						</a>
+						<a href="#" title="M&M's">
+							<img src="logos/mms.svg" alt="M&M's logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">M&M's</span>
+						</a>
+						<a href="#" title="The Coffee Bean & Tea Leaf">
+							<img src="logos/coffeebean.svg" alt="The Coffee Bean & Tea Leaf logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Coffee Bean</span>
+						</a>
+						<a href="#" title="SMC">
+							<img src="logos/smc.svg" alt="SMC logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">SMC</span>
+						</a>
+						<a href="#" title="Lifestyle">
+							<img src="logos/lifestyle.svg" alt="Lifestyle logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Lifestyle</span>
+						</a>
+						<a href="#" title="Red Bull">
+							<img src="logos/redbull.svg" alt="Red Bull logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Red Bull</span>
+						</a>
+						<a href="#" title="Microsoft">
+							<img src="logos/microsoft.svg" alt="Microsoft logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Microsoft</span>
+						</a>
+						<a href="#" title="CRED">
+							<img src="logos/cred.svg" alt="CRED logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">CRED</span>
+						</a>
+						<a href="#" title="Europaket+">
+							<img src="logos/europaket.png" alt="Europaket+ logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Europaket+</span>
+						</a>
+						<a href="#" title="Händlerbund">
+							<img src="logos/handlerbund.svg" alt="Händlerbund logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Händlerbund</span>
+						</a>
+						<a href="#" title="IBM">
+							<img src="logos/ibm.svg" alt="IBM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">IBM</span>
+						</a>
+						<a href="#" title="HP">
+							<img src="logos/hp.svg" alt="HP logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">HP</span>
+						</a>
+						<a href="#" title="Intel">
+							<img src="logos/intel.svg" alt="Intel logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Intel</span>
+						</a>
+					</div>
+				</section>
+				<!-- END LOGO GRID -->
+
 			</div>
-		</div>
-	</section> <!-- .cd-section --> 
+		</section>
 
-	
-	<footer class="footer no-shadow">
-		<div class="container">
-			<div class="sixteen columns">
-				<div class="footer-social">
-					<a href="#">twitter</a>
-					<a href="#">facebook</a>
-					<a href="#">google +</a>
+		<!-- FOOTER -->
+		<footer class="footer no-shadow">
+			<div class="container">
+				<div class="sixteen columns">
+					<div class="footer-social">
+						<a href="#">twitter</a>
+						<a href="#">facebook</a>
+						<a href="#">google +</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<div class="sixteen columns">
-				<div class="footer-copy-text" style="text-align: center;">
-					<p>© We are TMW. All rights reserved. 2025</p>
-					
+			<div class="container">
+				<div class="sixteen columns">
+					<div class="footer-copy-text" style="text-align: center;">
+						<p>© We are TMW. All rights reserved. 2025</p>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer> 	
-		
-	</div>		
+		</footer>
 
-		
-	<!-- JAVASCRIPT
-    ================================================== -->
-<script type="text/javascript" src="js/jquery.js"></script>	
-<script type="text/javascript" src="js/modernizr.custom.js"></script> 	
-<script type="text/javascript" src="js/jquery.animsition.min.js"></script>
-<script type="text/javascript">
-(function($) { "use strict";
-	$(document).ready(function() {
-	  
-	  $(".animsition").animsition({
-	  
-		inClass               :   'zoom-in-sm',
-		outClass              :   'zoom-out-sm',
-		inDuration            :    800,
-		outDuration           :    800,
-		linkElement           :   '.animsition-link', 
-		// e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
-		loading               :    true,
-		loadingParentElement  :   'body', //animsition wrapper element
-		loadingClass          :   'animsition-loading',
-		unSupportCss          : [ 'animation-duration',
-								  '-webkit-animation-duration',
-								  '-o-animation-duration'
-								],
-		//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser. 
-		//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-		
-		overlay               :   false,
-		
-		overlayClass          :   'animsition-overlay-slide',
-		overlayParentElement  :   'body'
-	  });
-	});  
-})(jQuery);
-</script>
-<script type="text/javascript" src="js/jquery.easing.js"></script>
-<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/cbpAnimatedHeader.min.js"></script>
-<script type="text/javascript" src="js/menu.js"></script> 	
-<script type="text/javascript" src="js/scroll.js"></script>
-<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script> 
-<script type="text/javascript" src="js/masonry.js"></script> 
-<script type="text/javascript" src="js/isotope.js"></script> 
-<script type="text/javascript" src="js/custom-work.js"></script>  	  
-<!-- End Document
-================================================== -->
+	</div>
+
+	<!-- SCRIPTS -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/jquery.animsition.min.js"></script>
+	<script type="text/javascript">
+		(function($) {
+			"use strict";
+			$(document).ready(function() {
+				$(".animsition").animsition({
+					inClass: 'zoom-in-sm',
+					outClass: 'zoom-out-sm',
+					inDuration: 800,
+					outDuration: 800,
+					linkElement: '.animsition-link',
+					loading: true,
+					loadingParentElement: 'body',
+					loadingClass: 'animsition-loading',
+					unSupportCss: [
+						'animation-duration',
+						'-webkit-animation-duration',
+						'-o-animation-duration'
+					],
+					overlay: false,
+					overlayClass: 'animsition-overlay-slide',
+					overlayParentElement: 'body'
+				});
+			});
+		})(jQuery);
+	</script>
+	<script type="text/javascript" src="js/jquery.easing.js"></script>
+	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/cbpAnimatedHeader.min.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/masonry.js"></script>
+	<script type="text/javascript" src="js/isotope.js"></script>
+	<script type="text/javascript" src="js/custom-work.js"></script>
+
 </body>
 </html>
