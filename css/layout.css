@@ -476,17 +476,17 @@ ul.slimmenu.collapsed li > ul {
 #slider-wrap div[style*="background-image"] {
 	position: absolute !important;
 	width: 100% !important;  /* reduced from 100% to contain the width */
-	height: 96% !important; /* reduced height for better fit */
-	top: 1% !important;   /* adjusted top to center vertically */
+	height: 91% !important; /* reduced height for better fit */
+	top: 0 !important;   /* adjusted top to center vertically */
 	left: 0 !important;  /* adjusted left to center horizontally */
 }
 
 /* Adjust specific images in slider */
 #slider-wrap img {
-	max-width: 8213px !important;  /* set maximum width for the images */
-	max-height:  4615px !important; /* set maximum height for the images */
+	width: 2560px !important;  /* set maximum width for the images */
+	height: 920px !important; /* set maximum height for the images */
 	object-fit: contain !important;
-	margin: auto !important;
+	margin: center !important;
 	display: block !important;
 }
 
