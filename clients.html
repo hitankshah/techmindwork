@@ -44,15 +44,11 @@
 			line-height: 1.6;
 		}
 		.logo-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-			gap: 40px;
-			align-items: center;
-			justify-items: center;
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 20px;
+    	display: grid;
+    	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    	gap: 40px;
 		}
+
 		.logo-grid a {
 			display: flex;
 			align-items: center;
@@ -77,6 +73,11 @@
 			filter: grayscale(100%);
 			transition: filter 0.3s ease;
 		}
+		.logo-grid a:focus {
+    outline: 2px solid #333;
+    outline-offset: 4px;
+}
+
 		.logo-grid a:hover img {
 			filter: grayscale(0%);
 		}
@@ -155,175 +156,178 @@
 
 <!-- LOGO GRID SECTION -->
 <section class="clients-section">
-    <div class="container">
+    
         <div class="sixteen columns">
             <div class="logo-grid">
                 <!-- Your existing logo grid items remain the same -->
-						<a href="#" title="Herbalife"><img src="logos/herbalife.svg" alt="Herbalife"></a>
-						<a href="#" title="Metro">
+						<div title="Herbalife">
+							<img src="logos/herbalife.svg" alt="Herbalife logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+							<span class="fallback-text">Herbalife</span>
+						</div>
+						<div title="Metro">
 							<img src="logos/metro.svg" alt="Metro logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Metro</span>
-						</a>
-						<a href="#" title="EMAG">
+						</div>
+						<div title="EMAG">
 							<img src="logos/emag.svg" alt="EMAG logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">EMAG</span>
-						</a>
-						<a href="#" title="Jack & Jones">
+						</div>
+						<div title="Jack & Jones">
 							<img src="logos/jackjones.svg" alt="Jack & Jones logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Jack & Jones</span>
-						</a>
-						<a href="#" title="Misbu">
-							<img src="logos/misbu.svg" alt="Misbu logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						</div>
+						<div title="Misbu">
+							<img src="logos/misbu.png" alt="Misbu logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Misbu</span>
-						</a>
-						<a href="#" title="Zara">
+						</div>
+						<div title="Zara">
 							<img src="logos/zara.svg" alt="Zara logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Zara</span>
-						</a>
-						<a href="#" title="PepsiCo">
+							</div>
+						<div title="PepsiCo">
 							<img src="logos/pepsico.svg" alt="PepsiCo logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">PepsiCo</span>
-						</a>
-						<a href="#" title="Decathlon">
+						</div>
+						<div title="Decathlon">
 							<img src="logos/decathlon.svg" alt="Decathlon logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Decathlon</span>
-						</a>
-						<a href="#" title="Larsen & Toubro">
+						</div>
+						<div title="Larsen & Toubro">
 							<img src="logos/larsentoubro.svg" alt="Larsen & Toubro logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Larsen & Toubro</span>
-						</a>
-						<a href="#" title="Forever 21">
+						</div>
+						<div title="Forever 21">
 							<img src="logos/forever21.svg" alt="Forever 21 logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Forever 21</span>
-						</a>
-						<a href="#" title="Sabyasachi">
-							<img src="logos/sabyasachi.svg" alt="Sabyasachi logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+						</div>
+						<div title="Sabyasachi">
+							<img src="logos/sabyasachi.jpg" alt="Sabyasachi logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Sabyasachi</span>
-						</a>
-						<a href="#" title="Charlotte's Web">
+						</div>
+						<div title="Charlotte's Web">
 							<img src="logos/charlottesweb.svg" alt="Charlotte's Web logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Charlotte's Web</span>
-						</a>
-						<a href="#" title="Bacardi">
+						</div>
+						<div title="Bacardi">
 							<img src="logos/bacardi.svg" alt="Bacardi logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Bacardi</span>
-						</a>
-						<a href="#" title="Carrefour">
+						</div>
+						<div title="Carrefour">
 							<img src="logos/carrefour.svg" alt="Carrefour logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Carrefour</span>
-						</a>
-						<a href="#" title="Bosch">
+						</div>
+						<div title="Bosch">
 							<img src="logos/bosch.svg" alt="Bosch logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Bosch</span>
-						</a>
-						<a href="#" title="Budweiser">
+						</div>
+						<div title="Budweiser">
 							<img src="logos/budweiser.svg" alt="Budweiser logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Budweiser</span>
-						</a>
-						<a href="#" title="Infosys">
+						</div>
+						<div title="Infosys">
 							<img src="logos/infosys.svg" alt="Infosys logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Infosys</span>
-						</a>
-						<a href="#" title="HSBC">
+						</div>
+						<div title="HSBC">
 							<img src="logos/hsbc.svg" alt="HSBC logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">HSBC</span>
-						</a>
-						<a href="#" title="Nescafé">
+						</div>
+						<div title="Nescafé">
 							<img src="logos/nescafe.svg" alt="Nescafé logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Nescafé</span>
-						</a>
-						<a href="#" title="Gillette">
+						</div>
+						<div title="Gillette">
 							<img src="logos/gillette.svg" alt="Gillette logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Gillette</span>
-						</a>
-						<a href="#" title="Indian Premier League">
+						</div>
+						<div title="Indian Premier League">
 							<img src="logos/ipl.svg" alt="Indian Premier League logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">IPL</span>
-						</a>
-						<a href="#" title="NBA">
+						</div>
+						<div title="NBA">
 							<img src="logos/nba.svg" alt="NBA logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">NBA</span>
-						</a>
-						<a href="#" title="Mindtree">
+						</div>
+						<div title="Mindtree">
 							<img src="logos/mindtree.svg" alt="Mindtree logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Mindtree</span>
-						</a>
-						<a href="#" title="3M">
+						</div>
+						<div title="3M">
 							<img src="logos/3m.svg" alt="3M logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">3M</span>
-						</a>
-						<a href="#" title="Grey Goose">
+						</div>
+						<div title="Grey Goose">
 							<img src="logos/greygoose.png" alt="Grey Goose logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Grey Goose</span>
-						</a>
-						<a href="#" title="Hindustan Unilever">
+						</div>
+						<div title="Hindustan Unilever">
 							<img src="logos/hul.svg" alt="Hindustan Unilever logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">HUL</span>
-						</a>
-						<a href="#" title="Nicetec">
+						</div>
+						<div title="Nicetec">
 							<img src="logos/nicetec.svg" alt="Nicetec logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Nicetec</span>
-						</a>
-						<a href="#" title="JW Marriott">
+						</div>
+						<div title="JW Marriott">
 							<img src="logos/jwmarriott.svg" alt="JW Marriott logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">JW Marriott</span>
-						</a>
-						<a href="#" title="SAP">
+						</div>
+						<div title="SAP">
 							<img src="logos/sap.svg" alt="SAP logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">SAP</span>
-						</a>
-						<a href="#" title="Kotak Life Insurance">
+						</div>
+						<div title="Kotak Life Insurance">
 							<img src="logos/kotak.svg" alt="Kotak Life Insurance logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Kotak</span>
-						</a>
-						<a href="#" title="M&M's">
+						</div>
+						<div title="M&M's">
 							<img src="logos/mms.svg" alt="M&M's logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">M&M's</span>
-						</a>
-						<a href="#" title="The Coffee Bean & Tea Leaf">
+						</div>
+						<div title="The Coffee Bean & Tea Leaf">
 							<img src="logos/coffeebean.svg" alt="The Coffee Bean & Tea Leaf logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Coffee Bean</span>
-						</a>
-						<a href="#" title="SMC">
+						</div>
+						<div title="SMC">
 							<img src="logos/smc.svg" alt="SMC logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">SMC</span>
-						</a>
-						<a href="#" title="Lifestyle">
+						</div>
+						<div title="Lifestyle">
 							<img src="logos/lifestyle.svg" alt="Lifestyle logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Lifestyle</span>
-						</a>
-						<a href="#" title="Red Bull">
+						</div>
+						<div title="Red Bull">
 							<img src="logos/redbull.svg" alt="Red Bull logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Red Bull</span>
-						</a>
-						<a href="#" title="Microsoft">
+						</div>
+						<div title="Microsoft">
 							<img src="logos/microsoft.svg" alt="Microsoft logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Microsoft</span>
-						</a>
-						<a href="#" title="CRED">
+						</div>
+						<div title="CRED">
 							<img src="logos/cred.svg" alt="CRED logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">CRED</span>
-						</a>
-						<a href="#" title="Europaket+">
+						</div>
+						<div title="Europaket+">
 							<img src="logos/europaket.png" alt="Europaket+ logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Europaket+</span>
-						</a>
-						<a href="#" title="Händlerbund">
+						</div>
+						<div title="Händlerbund">
 							<img src="logos/handlerbund.svg" alt="Händlerbund logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Händlerbund</span>
-						</a>
-						<a href="#" title="IBM">
+						</div>
+						<div title="IBM">
 							<img src="logos/ibm.svg" alt="IBM logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">IBM</span>
-						</a>
-						<a href="#" title="HP">
+						</div>
+						<div title="HP">
 							<img src="logos/hp.svg" alt="HP logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">HP</span>
-						</a>
-						<a href="#" title="Intel">
+						</div>
+						<div title="Intel">
 							<img src="logos/intel.svg" alt="Intel logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
 							<span class="fallback-text">Intel</span>
-						</a>
+						</div>
 					</div>
 				</section>
 				<!-- END LOGO GRID -->
