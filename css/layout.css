@@ -483,8 +483,8 @@ ul.slimmenu.collapsed li > ul {
 
 /* Adjust specific images in slider */
 #slider-wrap img {
-	width: 2560px !important;  /* set maximum width for the images */
-	height: 920px !important; /* set maximum height for the images */
+	max-width: 3200px !important;  /* set maximum width for the images */
+	max-height: 920px !important; /* set maximum height for the images */
 	object-fit: contain !important;
 	margin: center !important;
 	display: block !important;
