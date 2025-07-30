@@ -23,6 +23,128 @@
 	<link rel="stylesheet" href="css/retina.css"/>
 	<link rel="stylesheet" href="css/animsition.min.css"/>
 	
+	<style>
+		.full-width-img {
+			width: 100%;
+			height: auto;
+			display: block;
+			margin-bottom: 30px;
+		}
+		
+		.team-image-container,
+		.services-image-container {
+			padding: 20px;
+			margin-top: 30px;
+		}
+		
+		.text-content {
+			padding: 20px 0;
+		}
+		
+		.services-intro {
+			padding: 20px 0;
+		}
+		
+		.services-container {
+			margin-top: 60px;
+		}
+		
+		.section-header-text-left {
+			margin-top: 30px;
+		}
+
+		.services-box {
+			background: #fff;
+			padding: 25px;
+			border-radius: 10px;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.services-box:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+
+		.services-box h5 {
+			font-size: 18px;
+			margin-bottom: 15px;
+			color: #333;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		.services-box h5 span {
+			font-size: 20px;
+		}
+
+		.service-item {
+			color: #666;
+			font-size: 14px;
+			line-height: 1.5;
+			margin-bottom: 8px;
+			padding-left: 15px;
+			position: relative;
+		}
+
+		.service-item:before {
+			content: "•";
+			position: absolute;
+			left: 0;
+			color: #007bff;
+		}
+
+		/* Specific styling for service items */
+		.service-item {
+			margin-bottom: 8px;
+		}
+
+		/* First Row Services */
+		.strategy-consulting .service-item,
+		.tech-development .service-item,
+		.customer-exp .service-item,
+		.digital-exp .service-item {
+			color: #666;
+		}
+
+		/* Second Row Services */
+		.cloud-hosting .service-item,
+		.launch-scale .service-item {
+			color: #666;
+		}
+
+		.ecommerce-solutions p {
+			margin-bottom: 15px;
+		}
+
+		.support-text {
+			margin-top: 0;
+		}
+
+		.read-more {
+			color: #007bff;
+			text-decoration: none;
+			font-size: 14px;
+		}
+
+		.clear {
+			clear: both;
+			margin-bottom: 20px;
+		}
+
+		@media only screen and (max-width: 767px) {
+			.team-image-container,
+			.services-image-container {
+				margin: 20px 0;
+			}
+			
+			.services-box {
+				margin-bottom: 30px;
+			}
+		}
+	</style>
+	
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="favicon.png">
@@ -53,7 +175,7 @@
 							<a href="clients.html">Clients</a>
 						</li>
 						<li>
-							<a href="careers.html">careers</a>
+							<a href="carrer.html">careers</a>
 						</li>
 						<li>
 							<a href="contact.html">Contact</a>
@@ -75,7 +197,7 @@
 
 	<section class="section white-background padding-top-bottom shadow-sec" id="scroll-link">
 		<div class="container">	
-			<div class="ten columns">	
+			<div class="eight columns">	
 				<div class="section-header-text-left">	
 					<h4>Innovative <span class="accent-color">|</span> Strategic <span class="accent-color">|</span> Results-Driven<span class="accent-color">.</span></h4>
 					<div class="line-big-header"></div>
@@ -83,100 +205,110 @@
 					We craft transformative experiences, innovative solutions, and powerful products that elevate businesses and enrich lives.</p> 
 				</div>		
 					
-				<div class="six columns">	
+				<div class="text-content">	
 					<p class="text-bottom-margin">TMW integrates cutting-edge web technology, digital innovation, mobile solutions, and e-commerce expertise to create seamless, connected experiences that define the future of digital interaction.</p> 
 					<p class="text-bottom-margin">We operate at the intersection of technology and human experience, delivering solutions that match the speed of digital evolution.</p>	
 					<p class="text-bottom-margin">From startups to enterprise giants, B2B to B2C, we're equipped to transform your digital presence and drive your business forward.</p>
 				</div>	
+			</div>
+			<div class="eight columns">
+				<div class="team-image-container">
+					<img src="images/TMW Team idea.jpg" alt="TMW Team Brainstorming" class="full-width-img" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
 			</div>	
 		</div>
 	</section>
 
 	<section class="section white-background padding-bottom hidden-sec">
 		<div class="container">
-			<div class="sixteen columns">
+			<div class="eight columns">
+				<div class="services-image-container">
+					<img src="images/OurServices.jpg" alt="Our Services" class="full-width-img" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+			</div>
+			<div class="eight columns">
 				<div class="section-header-text-left">
 					<h4>Our Services<span>.</span></h4> 
 					<p>Transform your digital presence with our comprehensive technology solutions</p> 
 					<div class="line-header"></div>
+				
+					<div class="services-intro">
+						<p>We focus on delivering high-impact solutions that drive real business value. Our meticulous attention to design detail and technical excellence enables us to create scalable, performant solutions that stand out in today's digital landscape.</p>
+						<p>Through our streamlined approach, we deliver sophisticated yet intuitive solutions that exceed expectations and deliver measurable returns on investment.</p> 										
+					</div>
 				</div>
-			</div>	
-			
+			</div>
+			<div class="clear"></div>
 			<div class="sixteen columns">
-				<p>We focus on delivering high-impact solutions that drive real business value. Our meticulous attention to design detail and technical excellence enables us to create scalable, performant solutions that stand out in today's digital landscape.</p>
-				<p>Through our streamlined approach, we deliver sophisticated yet intuitive solutions that exceed expectations and deliver measurable returns on investment.</p> 										
-			</div>	
-					
-			<div class="four columns">
-				<div class="services-box">
-					<h5>🎯 Strategy & Consulting</h5>
-					<p>Analytics and Research</p>
-					<p>Digital Strategy</p>
-					<p>Go-To-Market Strategy</p>
-					<p>Platform & Positioning</p>
-					<p>Training and Education</p>
-				</div>	
-			</div>	
-			<div class="four columns">
-				<div class="services-box">
-					<h5>⚡ Technology & Development</h5>
-					<p>Custom Web Development</p>
-					<p>E-commerce Development</p>
-					<p>Mobile Application</p>
-					<p>API's & 3rd Party Integrations</p>
-					<p>Content Management System (CMS)</p>
-				</div>	
-			</div>
-			<div class="four columns">
-				<div class="services-box">
-					<h5>🎨 Customer Exp & Design</h5>
-					<p>UI / UX Design</p>
-					<p>Web / Mobile Design</p>
-					<p>Content Writing</p>
-					<p>AR Design & Development</p>
-					<p>VR Design & Development</p>
-				</div>	
-			</div>
-			<div class="four columns">
-				<div class="services-box">
-					<h5>🚀 Digital Experience</h5>
-					<p>Social Media Strategy</p>
-					<p>SEM, SEO & PPC</p>
-					<p>Social Media Marketing</p>
-					<p>Conversion Optimization</p>
-					<p>Innovative Workshops</p>
-				</div>	
-			</div>	
-			<div class="clear"></div>	
-			<div class="four columns">
-				<div class="services-box">
-					<h5>☁️ Cloud Hosting + Maintenance</h5>
-					<p>Scalable Cloud Hosting</p>
-					<p>Dedicated Hosting & Collocation</p>
-					<p>Server & Security Management</p>
-				</div>	
-			</div>		
-			<div class="four columns">
-				<div class="services-box">
-					<h5>🌟 Launch + Scale</h5>
-					<p>Maintenance & Support</p>
-					<p>QA Testing</p>
-					<p>Dedicated Teams</p>
-					<p>Internet of Things (IoT) Integrations</p>
-				</div>	
-			</div>	
-			<div class="four columns">
-				<div class="services-box">
-					<h5>🛍️ e-Commerce Solutions</h5>
-					<p>Create efficiencies throughout the entire shopping journey. Reach new customers faster with a fully-integrated solution</p>
+				<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 40px;">
+					<!-- Row 1 -->
+					<div class="services-box">
+						<h5><span><img src="images/strategic-consultant.jpg" alt="Strategy Icon" width="50" height="50"></span>Strategy & Consulting</h5>
+						<div class="service-item">Analytics and Research</div>
+						<div class="service-item">Digital Strategy</div>
+						<div class="service-item">Platform & Positioning</div>
+						<div class="service-item">Training and Education</div>
+						<div class="service-item">Go-To-Market Strategy</div>
+					</div>
+
+					<div class="services-box">
+						<h5><span><img src="images/technology-symbols.jpg" alt="Technology Icon" width="50" height="50"></span>Technology & Development</h5>
+						<div class="service-item">Custom Web Development</div>
+						<div class="service-item">API's & 3rd Party Integration</div>
+						<div class="service-item">Mobile Solutions</div>
+						<div class="service-item">E-commerce Development</div>
+						<div class="service-item">Content Management System (CMS)</div>
+					</div>
+
+					<div class="services-box">
+						<h5><span><img src="images/Cust exp.jpeg" alt="Customer Experience Icon" width="50" height="50"></span>Customer Exp & Design</h5>
+						<div class="service-item">UI / UX Design</div>
+						<div class="service-item">Web / Mobile Design</div>
+						<div class="service-item">AR Design & Development</div>
+						<div class="service-item">Content Writing</div>
+					</div>
+
+					<div class="services-box">
+						<h5><span><img src="images/Digital experience.png" alt="Digital Experience Icon" width="50" height="50"></span>Digital Experience</h5>
+						<div class="service-item">Social Media Strategy</div>
+						<div class="service-item">SEM, SEO & PPC</div>
+						<div class="service-item">Conversion Optimization</div>
+						<div class="service-item">Innovative Workshops</div>
+					</div>
+
+					<!-- Row 2 -->
+					<div class="services-box">
+						<h5><span><img src="images/Cloud Hsosting.png" alt="Cloud Hosting Icon" width="50" height="50"></span>Cloud Hosting + Maintenance</h5>
+						<div class="service-item">Scalable Cloud Hosting</div>
+						<div class="service-item">Server & Security Management</div>
+						<div class="service-item">Dedicated Hosting & Collocation</div>
+					</div>
+
+					<div class="services-box">
+						<h5><span><img src="images/Launch Scale.jpg" alt="Launch Scale Icon" width="50" height="50"></span>Launch + Scale</h5>
+						<div class="service-item">QA & Testing</div>
+						<div class="service-item">Dedicated Teams</div>
+						<div class="service-item">Maintenance & Support</div>
+						<div class="service-item">Internet of Things (IoT) Integrations</div>
+					</div>
+
+					<div class="services-box">
+						<h5><span><img src="images/ecommerce Sol.png" alt="e-Commerce Solutions Icon" width="50" height="50"></span>e-Commerce Solutions</h5>
+						<!-- <div class="service-item">Shopping Solutions</div>
+						<div class="service-item">Payment Integration</div> -->
+						<p>Create efficiencies throughout the entire shopping journey. Reach new customers faster with a fully-integrated solution</p>
 					<a href="#"><p><span class="accent-color">Read More →</span></p></a>
-				</div>	
-			</div>	
-			<div class="four columns">
-				<div class="services-box">
-					<h5>🔧 24/7 Support</h5>
-					<p>Whatever the challenges are, our team will be there round-the-clock to handle your queries.</p>
-				</div>	
+					</div>
+
+					<div class="services-box">
+						<h5><span><img src="images/24_7 support.jpg" alt="24/7 Support Icon" width="50" height="50"></span>24/7 Support</h5>
+						<!-- <div class="service-item">Round-the-clock Help</div>
+						<div class="service-item">Expert Assistance</div> -->
+						<p>Whatever the challenges are, our team will be there round-the-clock to handle your queries.</p>
+					</div>
+				</div>
+			</div>
+			</div>
 			</div>
 		</div>
 	</section>
