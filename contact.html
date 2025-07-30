@@ -77,6 +77,91 @@
 		font-size: 16px;
 	}
 
+/* Alignment and spacing improvements */
+.cd-block {
+  align-items: stretch;
+  justify-content: center;
+  gap: 0;
+}
+.cd-half-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+.block-text {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+.cd-half-block:last-child {
+  min-height: 100vh;
+}
+.contact-details {
+  width: 100%;
+  box-sizing: border-box;
+}
+#contact-form {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .cd-block {
+	flex-direction: column;
+	height: auto;
+	align-items: stretch;
+  }
+  .cd-half-block {
+	width: 100% !important;
+	min-height: 300px;
+	padding: 0;
+  }
+  .cd-half-block:last-child {
+	min-height: 300px;
+  }
+  .block-text {
+	max-width: 100%;
+	padding: 30px 10px;
+  }
+  #contact-form {
+	max-width: 100%;
+	padding: 30px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cd-block {
+	flex-direction: column;
+	height: auto;
+	align-items: stretch;
+  }
+  .cd-half-block {
+	width: 100% !important;
+	min-height: 300px;
+	padding: 0;
+  }
+  .cd-half-block:last-child {
+	min-height: 200px;
+  }
+  .block-text {
+	max-width: 100%;
+	padding: 20px 5px;
+  }
+  #contact-form {
+	max-width: 100%;
+	padding: 20px 5px;
+  }
+  .contact-details {
+	margin-bottom: 20px;
+  }
+}
 	@media (max-width: 768px) {
 		.cd-block {
 			flex-direction: column;
@@ -143,8 +228,10 @@
 						</div>
 						<div class="contact-info">
 							<h3>Phone</h3>
-							<p><a href="tel:+919513193993" style="color: #666; text-decoration: none;">+91 9513193993</a></p>
-							<p><a href="tel:+917411268357" style="color: #666; text-decoration: none;">+91 7411268357</a></p>
+<p>
+  <a href="tel:+919513193993" style="color: #666; text-decoration: none; display: block;"><span style="font-weight:500; color:#333;"></span> +91 9513193993</a>
+  <a href="tel:+917411268357" style="color: #666; text-decoration: none; display: block;"><span style="font-weight:500; color:#333;"></span> +91 7411268357</a>
+</p>
 						</div>
 					</div>
 
@@ -169,7 +256,7 @@
 		<section class="cd-section" style="background-color: #f8f9fa; padding: 60px 0;">
 		<div class="container">
 			<div class="sixteen columns">
-				<div class="block-text" style="text-align: center; padding: 0 20px;">
+				<div class="block-text" style="text-align: center; padding: 0.%;">
 					<h4 style="margin-bottom: 20px; color: #333; font-size: 32px;">Contact Us<span style="color: #e74c3c;">.</span></h4>
 					<p style="margin-bottom: 40px; color: #666; font-size: 18px;">Get in touch with us. We'd love to hear from you!</p>
 
@@ -224,7 +311,9 @@
 								</div>
 								<div style="margin-bottom: 15px;">
 									<span style="color: #333; font-weight: 500;">📞</span>
-									<span style="color: #666; margin-left: 10px;">+91 9513193993</span>
+  <span style="display: block;">+91 9513193993</span>
+  <span style="display: block;">+91 7411268357</span>
+</span>
 								</div>
 								<div>
 									<span style="color: #333; font-weight: 500;">📍</span>
