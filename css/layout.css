@@ -4,6 +4,8 @@
 
 @import url("colors/color.css");
 
+/* Basic Layout
+================================================== */
 
 /* #Loading Logo
 ================================================== */
@@ -28,42 +30,36 @@
 
 #menu-wrap{
 	position: fixed;
-	padding-bottom:0px;
-	width:100%;
-	z-index:500;
-	top:0;
-	left:0;
-
+	width: 100%;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	background: rgba(247,247,247,.95);
+	transition: transform 0.3s ease-out;
+	will-change: transform;
 }
+
+#menu-wrap.nav-up {
+	transform: translateY(-100%);
+}
+
+#menu-wrap.nav-down {
+	transform: translateY(0);
+}
+
 #menu-wrap .container .columns  {
 	margin-bottom: 0 !important;
 }
-.menu-back{
-	background: rgba(247,247,247,.8);
-	margin-bottom: 0% !important;
-	padding-bottom: 0% !important;
-	-webkit-transition : all 0.3s ease-out;
-	-moz-transition : all 0.3s ease-out;
-	-o-transition :all 0.3s ease-out;
-	transition : all 0.3s ease-out;
-}
-
 
 .cbp-af-header {
-	position: fixed;
-	top: 0;
-	left: 0;
+	position: relative;
 	width: 100%;
 	background: rgba(255,255,255,0.95);
-	z-index: 1000;
 	height: 80px;
-	-webkit-transition : all 0.3s ease-out;
-	-moz-transition : all 0.3s ease-out;
-	-o-transition :all 0.3s ease-out;
-	transition : all 0.3s ease-out;
 	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Commented out header shrink behavior
 .cbp-af-header.cbp-af-header-shrink {
 	background: rgba(255,255,255,1);
 	height: 60px;
@@ -72,12 +68,17 @@
 	-o-transition :all 0.3s ease-out;
 	transition : all 0.3s ease-out;
 }
+*/
+/* Commented out shrink behavior for logo
 .cbp-af-header.cbp-af-header-shrink .logo{
 	width:120px;
 	height:40px;
 	top:10px;
 	background:url('../images/logo.png') no-repeat center center;
 	background-size:120px 40px;
+}
+*/
+.cbp-af-header .logo {
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
@@ -100,6 +101,10 @@
 .cbp-af-header.cbp-af-header-shrink ul.slimmenu li {
 	padding: 8px 15px;
 	margin: 0 8px;
+	transition: all 0.3s ease-out;
+}
+.cbp-af-header.cbp-af-header-shrink ul.slimmenu li a {
+	font-size: 12px;
 	transition: all 0.3s ease-out;
 }
 .cbp-af-header.cbp-af-header-shrink ul.slimmenu li:first-child {
@@ -142,6 +147,20 @@ ul.slimmenu li ul {
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;
 	transition : all 0.3s ease-out;
+}
+
+/* Add spacing for all main content sections to account for fixed header */
+.cd-section {
+	padding-top: 55px; /* Height of the header */
+}
+
+/* Specific adjustments for pages */
+.about-top,
+.work-top,
+.blog-top,
+.projects-top {
+	margin-top: 0; /* Reset individual page margins since we're using section padding */
+	padding-top: 60px; /* Additional padding for visual spacing */
 }
 
 
@@ -253,7 +272,7 @@ ul.slimmenu li a {
 	text-transform:uppercase;
 	letter-spacing:2px;
 	border-bottom:1px solid rgba(0,0,0,0);
-	font-size: 11px;
+	font-size: 13px;
 	-webkit-transition: all 300ms linear;
 	-moz-transition: all 300ms linear;
 	-o-transition: all 300ms linear;
@@ -511,8 +530,8 @@ ul.slimmenu.collapsed li > ul {
 #slider-wrap div[style*="background-image"] {
 	position: absolute !important;
 	width: 100% !important;  /* reduced from 100% to contain the width */
-	height: 91% !important; /* reduced height for better fit */
-	top: 0 !important;   /* adjusted top to center vertically */
+	height: 97% !important; /* reduced height for better fit */
+	top: -4.5% !important;   /* adjusted top to center vertically */
 	left: 0 !important;  /* adjusted left to center horizontally */
 }
 
@@ -1347,7 +1366,7 @@ a.scroll-down.scroll-yt {
 	background:url('../images/about.jpg') no-repeat center center;
 	background-size:cover;
 	background-attachment: fixed;
-	margin-top: 81px;
+	margin-top: 0px;
 	z-index: 1;
 	min-height: 500px;
 } 
@@ -2846,9 +2865,131 @@ margin-top: 120px;
   .header-nav { display: none; }
 }
 
+/* Enhanced Section Styles */
+.section-header-text-center {
+	text-align: center;
+	max-width: 1000px;
+	margin: 0 auto 80px;
+	position: relative;
+	padding: 40px 0;
+	background-image: url('../images/pattern-overlay.svg');
+	background-repeat: repeat;
+	background-position: center;
+}
 
+.big-title {
+	font-size: 42px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-bottom: 30px;
+	line-height: 1.4;
+}
 
+.highlight {
+	display: inline-block;
+	padding: 0 10px;
+	transition: all 0.3s ease;
+}
 
+.highlight:hover {
+	transform: translateY(-2px);
+}
 
+.separator {
+	margin: 0 15px;
+	opacity: 0.8;
+}
 
+.emphasis-text {
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.6;
+	color: #555;
+	max-width: 800px;
+	margin: 0 auto;
+}
 
+.text-container {
+	padding: 30px 0;
+}
+
+.feature-text {
+	font-size: 16px;
+	line-height: 1.8;
+	margin-bottom: 25px;
+	color: #666;
+}
+
+/* Services Section Styles */
+.service-title {
+	font-size: 48px;
+	margin-bottom: 20px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.subtitle-container {
+	margin: 25px 0;
+}
+
+.service-subtitle {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.service-tagline {
+	font-size: 18px;
+	color: #666;
+	font-weight: 300;
+	margin-top: 10px;
+}
+
+.centered-line {
+	margin: 30px auto;
+	width: 80px;
+	height: 3px;
+	background-color: #333;
+}
+
+.service-intro-text {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0 40px;
+}
+
+.lead-paragraph {
+	font-size: 18px;
+	line-height: 1.8;
+	margin-bottom: 25px;
+	color: #444;
+}
+
+.supporting-text {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #666;
+	margin-top: 20px;
+}
+
+/* Animation for text elements */
+.highlight,
+.service-title,
+.service-subtitle,
+.service-tagline {
+	animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

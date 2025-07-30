@@ -243,7 +243,7 @@
 	color: #FFF;
 	display: inline-block;
 	zoom: 1;
-	*display: inline;/*IE7 life-saver */
+	display: inline-block; /* Modern browsers */
 	
 	font-size: 12px;
 	-webkit-border-radius: 30px;
@@ -266,7 +266,7 @@
 .owl-theme .owl-controls .owl-page{
 	display: inline-block;
 	zoom: 1;
-	*display: inline;/*IE7 life-saver */
+	display: inline;
 }
 .owl-theme .owl-controls .owl-page span{
 	display: block;
