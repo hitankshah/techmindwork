@@ -39,15 +39,13 @@
 			z-index: 1000;
 		}
 		
-		.cd-section {
-			position: relative;
-			z-index: 1;
-		}
 		
 		.about-top {
-			position: relative;
-			z-index: 1;
-		}
+    position: relative;
+    z-index: 1;
+	margin-top: auto; 
+    height: 652px;
+}
 		
 		/* Ensure sections don't overlap */
 		.section {
@@ -337,27 +335,37 @@
 </head>
 <body>
 	<div class="animsition">
-		<!-- Navigation -->
+	
+	<!-- MENU
+	================================================== -->	
+
 		<div id="menu-wrap" class="menu-back cbp-af-header">
 			<div class="container">
 				<div class="sixteen columns">
-				<div class="logo"></div>
-				<ul class="slimmenu">
-					<li><a href="index.html">home</a></li>
-					<li><a class="active-menu animsition-link" href="about.html">about</a></li>
-					<li><a href="clients.html">Clients</a></li>
-					<li><a href="careers.html">careers</a></li>
-					<li><a href="contact.html">Hello</a></li>
-				</ul>
+					<div class="logo"></div>
+					<ul class="slimmenu">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a class="active-menu animsition-link" href="about.html">about</a>
+						</li>
+						<li>
+							<a href="clients.html">Clients</a>
+						</li>
+						<li>
+							<a href="careers.html">Careers</a>
+						</li>
+						<li>
+							<a href="contact.html">Hello</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
 
 		<!-- Hero Section -->
-		<section class="cd-section">
 				<div class="about-top"></div>
-			</div>
-		</section>
 
 		<!-- About Section -->
 		<section class="section white-background" id="scroll-link">
@@ -475,20 +483,12 @@
 </section>
 <!-- White background spacer above footer for seamless transition -->
 
-		<div class="sixteen columns">
-		<div style="max-width: 1200px; margin: 0 auto;">
-			<!-- Main Footer Content -->
-
-			<!-- Bottom Footer -->
-			<div style="border-top: 1px solid #e5e5e5; padding-top: 30px; text-align: center;">
-				<p style="color: #999; font-size: 14px; margin: 0; text-align: center;">
-					© 2025 Tech Mind Works. All rights reserved.
-				</p>
-			</div>
-		</div>
-		</div>
-	</div>
-	</footer>
+<!-- Bottom Footer Only, Centered -->
+<div style="border-top: 1px solid #e5e5e5; padding-top: 30px; text-align: center; margin-top: 40px;">
+	<p style="color: #999; font-size: 14px; margin: 0; text-align: center;">
+		© 2025 Tech Mind Works. All rights reserved.
+	</p>
+</div>
 
 	<!-- JavaScript -->
 	<script src="js/jquery.js"></script>
