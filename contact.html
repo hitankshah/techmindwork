@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 	<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 	<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
@@ -97,7 +98,6 @@
   margin: 0 auto;
   padding: 40px 20px;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 .cd-half-block:last-child {
   min-height: 100vh;
@@ -109,10 +109,8 @@
 #contact-form {
   margin: 0 auto;
   width: 100%;
-  max-width: 500px;
-  min-width: 0;
+  max-width: 600px;
   box-sizing: border-box;
-  padding: 32px 5vw 32px 5vw;
 }
 
 @media (max-width: 1024px) {
@@ -135,7 +133,7 @@
   }
   #contact-form {
 	max-width: 100%;
-	padding: 20px 2vw;
+	padding: 30px 10px;
   }
 }
 
@@ -159,7 +157,7 @@
   }
   #contact-form {
 	max-width: 100%;
-	padding: 10px 2vw;
+	padding: 20px 5px;
   }
   .contact-details {
 	margin-bottom: 20px;
@@ -256,46 +254,56 @@
 		</section>
 
 		<!-- CONTACT FORM SECTION -->
-		<section class="cd-section" style="background-color: #f8f9fa; padding: 60px 0;">
-		<div class="container">
-			<div class="sixteen columns">
-<div class="block-text" style="text-align: center; padding: 0; max-width: 100vw; box-sizing: border-box; overflow-x: hidden;">
-					<h4 style="margin-bottom: 10px; color: #333; font-size: 32px;">Contact Us<span style="color: #e74c3c;">.</span></h4>
-					<p style="margin-bottom: 30px; color: #666; font-size: 18px;">Get in touch with us. We'd love to hear from you!</p>
+		<section class="cd-section" style="background-color: #f8f9fa; padding: 30px 0;">
+  <div class="container">
+	<div class="sixteen columns">
+	  <div class="block-text" style="text-align: center;">
+		<h4 style="margin-bottom: 10px; color: #333; font-size: 24px;">Contact Us<span style="color: #e74c3c;">.</span></h4>
+		<p style="margin-bottom: 20px; color: #666; font-size: 14px;">Get in touch with us. We'd love to hear from you!</p>
 
-<form id="contact-form" action="mail-it.php" method="post" style="max-width: 100%; width: 100%; min-width: 0; margin: 0 auto; text-align: left; background: white; padding: 32px 5vw 32px 5vw; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); box-sizing: border-box; overflow-x: hidden;">
-						<div style="margin-bottom: 25px;">
-							<label for="name" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-user" style="color: #e74c3c; margin-right: 8px;"></i>Name *</label>
-							<input type="text" id="name" name="name" required placeholder="Your Full Name" style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'">
-						</div>
+		<form id="contact-form" action="mail-it.php" method="post" style="max-width: 500px; margin: 0 auto; text-align: left; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+		  <div style="margin-bottom: 15px;">
+			<label for="name" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+			  <i class="fa fa-user" style="color: #e74c3c; margin-right: 6px;"></i>Name *
+			</label>
+			<input type="text" id="name" name="name" required placeholder="Your Full Name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+		  </div>
 
-						<div style="margin-bottom: 25px;">
-							<label for="email" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-envelope" style="color: #e74c3c; margin-right: 8px;"></i>Email *</label>
-							<input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'">
-						</div>
+		  <div style="margin-bottom: 15px;">
+			<label for="email" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+			  <i class="fa fa-envelope" style="color: #e74c3c; margin-right: 6px;"></i>Email *
+			</label>
+			<input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+		  </div>
 
-						<div style="margin-bottom: 25px;">
-							<label for="phone" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-phone" style="color: #e74c3c; margin-right: 8px;"></i>Contact Number</label>
-							<input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'">
-						</div>
+		  <div style="margin-bottom: 15px;">
+			<label for="phone" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+			  <i class="fa fa-phone" style="color: #e74c3c; margin-right: 6px;"></i>Contact Number
+			</label>
+			<input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+		  </div>
 
-						<div style="margin-bottom: 30px;">
-							<label for="message" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-comment" style="color: #e74c3c; margin-right: 8px;"></i>Message *</label>
-							<textarea id="message" name="message" rows="6" required placeholder="Tell us about your project or inquiry..." style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; resize: vertical; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'"></textarea>
-						</div>
+		  <div style="margin-bottom: 20px;">
+			<label for="message" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+			  <i class="fa fa-comment" style="color: #e74c3c; margin-right: 6px;"></i>Message *
+			</label>
+			<textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; resize: vertical; font-size: 14px;"></textarea>
+		  </div>
 
-						<div style="text-align: center;">
-							<button type="submit" style="background-color: #e74c3c; color: white; padding: 18px 40px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; transition: all 0.3s; box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);" onmouseover="this.style.backgroundColor='#c0392b'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#e74c3c'; this.style.transform='translateY(0)'">
-								<i class="fa fa-paper-plane" style="margin-right: 10px;"></i>Send Message
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		</section>
-
-		<!-- FOOTER -->
+		  <div style="text-align: center;">
+			<button type="submit" style="background-color: #e74c3c; color: white; padding: 10px 25px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: bold;">
+			  <i class="fa fa-paper-plane" style="margin-right: 6px;"></i>Send
+			</button>
+		  </div>
+		</form>
+	  </div>
+	</div>
+  </div>  
+</section>
+<section class="section-compact ecosystem-section" style="background: #fff;">
+  <div class="container">
+<!-- White background spacer above footer for seamless transition -->
+<div style="background: #fff; width: 100%; height: 30px;"></div>
 		<footer class="footer" style="background: white; color: #333; padding: 60px 0 30px 0; margin-top: 80px; border-top: 1px solid #e5e5e5;">
 			<div class="container">
 				<div class="sixteen columns">
@@ -313,8 +321,9 @@
 									<span style="color: #666; margin-left: 10px;">info@techmindswork.com</span>
 								</div>
 								<div style="margin-bottom: 15px;">
-  <span style="display: block;"><span style="font-weight:500; color:#333;">📞</span> +91 9513193993</span>
-  <span style="display: block;"><span style="font-weight:500; color:#333;">📞</span> +91 7411268357</span>
+									<span style="color: #333; font-weight: 500;">📞</span>
+  <span style="display: block;">+91 9513193993</span>
+  <span style="display: block;">+91 7411268357</span>
 </span>
 								</div>
 								<div>
@@ -408,5 +417,43 @@
 	<script type="text/javascript" src="js/scroll.js"></script>
 	<script type="text/javascript" src="js/header-scroll.js"></script>
 	<script type="text/javascript" src="js/custom-contact2.js"></script>
-	</body>
+	<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
 	</html>
