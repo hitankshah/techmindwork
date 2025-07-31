@@ -253,44 +253,52 @@
 		</section>
 
 		<!-- CONTACT FORM SECTION -->
-		<section class="cd-section" style="background-color: #f8f9fa; padding: 60px 0;">
-		<div class="container">
-			<div class="sixteen columns">
-				<div class="block-text" style="text-align: center; padding: 0.%;">
-					<h4 style="margin-bottom: 20px; color: #333; font-size: 32px;">Contact Us<span style="color: #e74c3c;">.</span></h4>
-					<p style="margin-bottom: 40px; color: #666; font-size: 18px;">Get in touch with us. We'd love to hear from you!</p>
+		<section class="cd-section" style="background-color: #f8f9fa; padding: 30px 0;">
+  <div class="container">
+    <div class="sixteen columns">
+      <div class="block-text" style="text-align: center;">
+        <h4 style="margin-bottom: 10px; color: #333; font-size: 24px;">Contact Us<span style="color: #e74c3c;">.</span></h4>
+        <p style="margin-bottom: 20px; color: #666; font-size: 14px;">Get in touch with us. We'd love to hear from you!</p>
 
-					<form id="contact-form" action="mail-it.php" method="post" style="max-width: 600px; margin: 0 auto; text-align: left; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-						<div style="margin-bottom: 25px;">
-							<label for="name" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-user" style="color: #e74c3c; margin-right: 8px;"></i>Name *</label>
-							<input type="text" id="name" name="name" required placeholder="Your Full Name" style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'">
-						</div>
+        <form id="contact-form" action="mail-it.php" method="post" style="max-width: 500px; margin: 0 auto; text-align: left; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+          <div style="margin-bottom: 15px;">
+            <label for="name" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+              <i class="fa fa-user" style="color: #e74c3c; margin-right: 6px;"></i>Name *
+            </label>
+            <input type="text" id="name" name="name" required placeholder="Your Full Name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+          </div>
 
-						<div style="margin-bottom: 25px;">
-							<label for="email" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-envelope" style="color: #e74c3c; margin-right: 8px;"></i>Email *</label>
-							<input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'">
-						</div>
+          <div style="margin-bottom: 15px;">
+            <label for="email" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+              <i class="fa fa-envelope" style="color: #e74c3c; margin-right: 6px;"></i>Email *
+            </label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+          </div>
 
-						<div style="margin-bottom: 25px;">
-							<label for="phone" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-phone" style="color: #e74c3c; margin-right: 8px;"></i>Contact Number</label>
-							<input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'">
-						</div>
+          <div style="margin-bottom: 15px;">
+            <label for="phone" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+              <i class="fa fa-phone" style="color: #e74c3c; margin-right: 6px;"></i>Contact Number
+            </label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXXXXXXX" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+          </div>
 
-						<div style="margin-bottom: 30px;">
-							<label for="message" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;"><i class="fa fa-comment" style="color: #e74c3c; margin-right: 8px;"></i>Message *</label>
-							<textarea id="message" name="message" rows="6" required placeholder="Tell us about your project or inquiry..." style="width: 100%; padding: 15px; border: 2px solid #ddd; border-radius: 8px; resize: vertical; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#e74c3c'" onblur="this.style.borderColor='#ddd'"></textarea>
-						</div>
+          <div style="margin-bottom: 20px;">
+            <label for="message" style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 14px; color: #333;">
+              <i class="fa fa-comment" style="color: #e74c3c; margin-right: 6px;"></i>Message *
+            </label>
+            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; resize: vertical; font-size: 14px;"></textarea>
+          </div>
 
-						<div style="text-align: center;">
-							<button type="submit" style="background-color: #e74c3c; color: white; padding: 18px 40px; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight: bold; transition: all 0.3s; box-shadow: 0 3px 10px rgba(231, 76, 60, 0.3);" onmouseover="this.style.backgroundColor='#c0392b'; this.style.transform='translateY(-2px)'" onmouseout="this.style.backgroundColor='#e74c3c'; this.style.transform='translateY(0)'">
-								<i class="fa fa-paper-plane" style="margin-right: 10px;"></i>Send Message
-							</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		</section>
+          <div style="text-align: center;">
+            <button type="submit" style="background-color: #e74c3c; color: white; padding: 10px 25px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: bold;">
+              <i class="fa fa-paper-plane" style="margin-right: 6px;"></i>Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 		<!-- FOOTER -->
 		<footer class="footer" style="background: white; color: #333; padding: 60px 0 30px 0; margin-top: 80px; border-top: 1px solid #e5e5e5;">
